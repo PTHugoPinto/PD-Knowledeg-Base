@@ -21,6 +21,38 @@
 
     <link href="/icofont/icofont.min.css" rel="stylesheet">
 
+
+    <style>
+        .bs-example {
+            margin: 20px;
+        }
+
+        .modal-dialog iframe {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            /* Get iframe src attribute value i.e. YouTube video url
+            and store it in a variable */
+            var url = $("#cartoonVideo").attr('src');
+
+            /* Assign empty url value to the iframe src attribute when
+            modal hide, which stop the video playing */
+            $("#myModal").on('hide.bs.modal', function () {
+                $("#cartoonVideo").attr('src', '');
+            });
+
+            /* Assign the initially stored url back to the iframe src
+            attribute when modal is displayed again */
+            $("#myModal").on('show.bs.modal', function () {
+                $("#cartoonVideo").attr('src', url);
+            });
+        });
+    </script>
+
+
 </head>
 
 
@@ -72,8 +104,27 @@
                         <p class="text-muted">Fujitsu Technology Solutions</p>
                         <h1>Pingo Doce Knowledge Base </h1>
                         <p class="text-muted">Bem-vindo</p>
-                        <a href="#" class="btn btn-custom">Conheça o Maestro<img src="./images/Play icon.png" alt=""
-                                style="margin-left: 10px;"></a>
+                        <a href="#myModal" class="btn btn-custom btn-lg" data-toggle="modal">Launch Demo Modal</a>
+                        <!-- Modal HTML -->
+                        <div id="myModal" class="modal fade" style="margin-top: 100px;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">O que é o Maestro</h5>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe width="560" height="315"
+                                                src="https://www.youtube.com/embed/7nK6ljL202M"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
