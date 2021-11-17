@@ -30,6 +30,46 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
+<style>
+  .button {
+    border-radius: 4px;
+    background-color: #72a031;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+</style>
 
 <body>
 
@@ -40,7 +80,7 @@
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
-        <h2>MANUAIS</h2>
+        <h3 style="color: gray; font-size: medium;">MANUAIS</h3>
         <p>PD Knowledge Base</p>
 
         <a href="https://pthugopinto.github.io/PD-Knowledeg-Base/" class="btn btn-dark">Home Page</a>
@@ -60,53 +100,135 @@
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
         <div class="col-lg-4 col-md-6 portfolio-item field">
-          <a href="../Manuais Landing Page/assets/Manuais PDFs/@JM Docs - Field - Configuração Pinpad - 1.0.pdf"
-            target="_blank"><img src="./assets/img/Maestro/Manuas_Field_ConfPinpad.jpg" class="img-fluid" alt=""></a>
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Field
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Configuração do Pinpad</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Field - Configuração Pinpad - 1.0.pdf" target="_blank"><button
+                  class="button" style="margin-bottom: 7px;"><span>Manual Download</span></button></a>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item field">
-          <a href="../Manuais Landing Page/assets/Manuais PDFs/@JM Docs - Field - Instalação de Loja Maestro - 2.1.pdf"
-            target="_blank"><img src="./assets/img/Maestro/Manuas_Field_InstalacaoLojaMAestro.jpg" class="img-fluid"
-              alt=""></a>
-        </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item field">
-          <a href="../Manuais Landing Page/assets/Manuais PDFs/@JM Docs - Field - Troubleshooting Maestro - 1.0.pdf"
-            target="_blank"><img src="./assets/img/Maestro/Manuas_Field_Troubleshooting.jpg" class="img-fluid"
-              alt=""></a>
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Field
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Instalação Loja Maestro</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Field - Instalação de Loja Maestro - 2.1.pdf"
+                target="_blank"><button class="button" style="margin-bottom: 7px;"><span>Manual
+                    Download</span></button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 portfolio-item field">
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Field
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Troubleshooting Maestro</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Field - Troubleshooting Maestro - 1.0.pdf"
+                target="_blank"><button class="button" style="margin-bottom: 7px;"><span>Manual
+                    Download</span></button></a>
+            </div>
+          </div>
         </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item rollout">
-          <a href="../Manuais Landing Page/assets/Manuais PDFs/@JM Docs - Rollout - Maestro Field - 2.0.pdf"
-            target="_blank"><img src="./assets/img/Maestro/Manuas_Rollout_FieldMaestro.jpg" class="img-fluid"
-              alt=""></a>
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Rollout
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Rollout Maestro</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Rollout - Maestro Field - 2.0.pdf" target="_blank"><button
+                  class="button" style="margin-bottom: 7px;"><span>Manual Download</span></button></a>
+            </div>
+          </div>
         </div>
+
 
         <div class="col-lg-4 col-md-6 portfolio-item rollout">
-          <a href="../Manuais Landing Page/assets/Manuais PDFs/@JM Docs - Rollout - Upgrade de Memória - V1.0.pdf"
-            target="_blank"><img src="./assets/img/Maestro/Manuas_Rollout_UpgradeRAm.jpg" class="img-fluid" alt=""></a>
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Rollout
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Upgrade Memórias (i3)</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Rollout - Upgrade de Memória - V1.0.pdf" target="_blank"><button
+                  class="button" style="margin-bottom: 7px;"><span>Manual Download</span></button></a>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item staging">
-          <a href="../Manuais Landing Page/assets/Manuais PDFs/@JM Docs - Staging- Hangar SCO - V1.0.pdf"
-            target="_blank"><img src="./assets/img/Maestro/Manuas_Staging_Hangar.jpg" class="img-fluid" alt=""></a>
-        </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item staging">
-          <a href="#" target="_blank"><img src="./assets/img/Maestro/Manuas_Wip.jpg" class="img-fluid" alt=""></a>
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Staging
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Staging Self-checkout</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Staging- Hangar SCO - V1.0.pdf" target="_blank"><button
+                  class="button" style="margin-bottom: 7px;"><span>Manual Download</span></button></a>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item staging">
-          <a href="#" target="_blank"><img src="./assets/img/Maestro/Manuas_Wip.jpg" class="img-fluid" alt=""></a>
+
+        <div class="col-lg-4 col-md-6 portfolio-item rollout">
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Rollout
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Substituição do Disco (i3)</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Rollout - Substituição do Disco - 1.0.pdf"
+                target="_blank"><button class="button" style="margin-bottom: 7px;"><span>Manual
+                    Download</span></button></a>
+            </div>
+          </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item staging">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+
+        <div class="col-lg-4 col-md-6 portfolio-item rollout">
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Rollout
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Substituição Impressora</b></h4>
+              <a href="./assets/Manuais PDFs/@JM Docs - Rollout - Substituição da Impressora - 1.0.pdf"
+                target="_blank"><button class="button" style="margin-bottom: 7px;"><span>Manual
+                    Download</span></button></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 portfolio-item field">
+          <div class="card" style="background-color: #88C03C;">
+            <div class="card-body text-center">
+              <h5 class="card-title" style=" padding-top: 15px;padding-bottom: 15px; font-size: medium; color: white;">
+                @JM Docs -
+                Field
+              </h5>
+              <h4 class="card-text" style="padding-bottom: 35px; color: white;"> <b>Work in Progress</b></h4>
+              <a href="#"><button class="button" style="margin-bottom: 7px;"><span>Manual Download</span></button></a>
             </div>
           </div>
         </div>
