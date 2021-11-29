@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive bootstrap landing template">
+  <meta name="author" content="Coderthemes">
+
+  <link rel="shortcut icon" href="images/FTS Logo_favicon.png">
+
+  <title>JM Knowlegde Base</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/icons.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="/icofont/icofont.min.css" rel="stylesheet">
+
+
+  <style>
+    .bs-example {
+      margin: 20px;
+    }
+
+    .modal-dialog iframe {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+  <style>
+    /*--------------------------------------------------------------
+    [ ## Services ]
+--------------------------------------------------------------*/
+    .services-items-list {
+      margin-bottom: -20px;
+    }
+
+    @media (min-width: 768px) {
+      .services-items-list {
+        margin-bottom: -30px;
+      }
+    }
+
+    .service-item {
+      position: relative;
+      padding: 15px 15px 15px 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      margin-bottom: 20px;
+      -webkit-transition: all 0.25s linear 0ms;
+      transition: all 0.25s linear 0ms;
+      background-color: #88C03C;
+      overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .service-item {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .service-item {
+        padding: 20px 15px 20px 0;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .service-item {
+        padding: 25px 15px 25px 0;
+      }
+    }
+
+    .service-item .service-icon {
+      width: 80px;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      border-right: 1px solid #dddddd;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-transition: all 0.25s linear 0ms;
+      transition: all 0.25s linear 0ms;
+      height: 45px;
+    }
+
+    @media (min-width: 1200px) {
+      .service-item .service-icon {
+        width: 88px;
+        height: 50px;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .service-item .service-icon {
+        width: 100px;
+        height: 55px;
+      }
+    }
+
+    .service-item .service-icon img {
+      -webkit-transition: all 0.1s linear 0ms;
+      transition: all 0.1s linear 0ms;
+      -webkit-transform: scale(0.75);
+      transform: scale(0.75);
+    }
+
+    @media (min-width: 1200px) {
+      .service-item .service-icon img {
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .service-item .service-icon img {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    .service-item .title {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.25em;
+      margin-bottom: 0;
+      font-weight: 700;
+      padding-left: 40px;
+      -webkit-transition: all 0.15s linear 0ms;
+      transition: all 0.15s linear 0ms;
+      position: relative;
+    }
+
+    @media (min-width: 1200px) {
+      .service-item .title {
+        font-size: 22px;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .service-item .title {
+        font-size: 25px;
+        padding-left: 45px;
+      }
+    }
+
+    .service-item .title:before {
+      position: absolute;
+      content: '\f054';
+      font-family: "Font Awesome 5 Free";
+      font-size: 13px;
+      padding: 0;
+      left: 20px;
+      top: 1px;
+      color: inherit;
+      -webkit-transition: all 0.15s linear 0ms;
+      transition: all 0.15s linear 0ms;
+    }
+
+    @media (min-width: 1400px) {
+      .service-item .title:before {
+        left: 25px;
+      }
+    }
+
+    .service-item:hover {
+      background-color: #253510;
+      ;
+    }
+
+    .service-item:hover .title {
+      color: white;
+    }
+
+    .service-item:hover .title:before {
+      font-size: 16px;
+    }
+
+    @media (min-width: 1400px) {
+      .service-item:hover .title:before {
+        font-size: 18px;
+      }
+    }
+
+    .service-item:hover .service-icon {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .service-item:hover .service-icon img {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url = $("#cartoonVideo").attr('src');
+
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("#myModal").on('hide.bs.modal', function () {
+        $("#cartoonVideo").attr('src', '');
+      });
+
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed again */
+      $("#myModal").on('show.bs.modal', function () {
+        $("#cartoonVideo").attr('src', url);
+      });
+    });
+  </script>
+
+
+</head>
+
+
+<body>
+
+  <nav
+    class="navbar navbar-expand-lg fixed-top navbar-custom navbar-default navbar-light navbar-custom-dark bg-trans sticky">
+    <div class="container">
+      <!-- LOGO -->
+      <a class="navbar-brand logo" href="index.html">
+        <img src="./images/FTS-white.png" class="logo logo-white" alt="logo">
+        <img src="images/logo_green.png" class="logo logo-dark" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav ml-auto navbar-center" id="mySidenav">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link scroll">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://pthugopinto.github.io/PD-Knowledeg-Base/Manuais/Manuais%20Landing%20Page/index_Manuais.html"
+              class="nav-link scroll">Manuais</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="section home-alt bg-gradient" id="home" style="padding-top: 150px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="home-wrapper text-center">
+            <p class="text-muted">Fujitsu Technology Solutions</p>
+            <h1>SCO Knowledge Base </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="clearfix"></div>
+
+  <section style="padding-bottom: 50px; padding-top: 100px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center subscribe-form">
+            <img src="./images/SCO_IMG_C.png" alt="" style="max-width: 15%;">
+          </div>
+        </div> <!-- end Col -->
+      </div>
+    </div>
+  </section>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Services Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div id="service-block" class="services-block pd-t-170" style="padding-bottom: 200px;">
+    <div class="container container-1200">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+        </div><!-- /.col-lg-8 -->
+      </div><!-- /.row -->
+
+      <div class="row services-items-list gutters-30">
+        <div class="col-lg-4 col-md-6">
+          <a class="service-item" href="#">
+            <div class="service-icon">
+              <i class="pe-7s-science" style="color: white; font-size: 50px;"></i>
+            </div>
+            <!-- /.service-icon -->
+            <h3 class="title">Técnicos</h3>
+          </a>
+          <!-- /.service-item -->
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4 col-md-6">
+          <a class="service-item" href="#">
+            <div class="service-icon">
+              <i class="pe-7s-science" style="color: white; font-size: 50px;"></i>
+            </div>
+            <!-- /.service-icon -->
+            <h3 class="title">Clientes</h3>
+          </a>
+          <!-- /.service-item -->
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4 col-md-6">
+          <a class="service-item" href="#">
+            <div class="service-icon">
+              <i class="pe-7s-science" style="color: white; font-size: 50px;"></i>
+            </div>
+            <!-- /.service-icon -->
+            <h3 class="title">Videos</h3>
+          </a>
+          <!-- /.service-item -->
+        </div>
+
+        <!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </div>
+  <!--~~./ end services block ~~-->
+
+
+
+
+
+  <section class="section bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center subscribe-form">
+            <h3>shaping tomorrow with you</h3>
+            <img src="./images/FTS Logo_favicon.png" alt="">
+          </div>
+        </div> <!-- end Col -->
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <p class="copyright">© 2021 - Fujitsu Technology Solutions</p>
+        </div>
+      </div> <!-- end row -->
+    </div> <!-- end container -->
+  </footer>
+
+
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Jquery easing -->
+  <script src="js/jquery.easing.min.js"></script>
+  <!--sticky header-->
+  <script src="js/jquery.sticky.js"></script>
+  <!--common script for all pages-->
+  <script src="js/jquery.app.js"></script>
+
+  <script>
+    //sticky header on scroll
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 50) {
+        $(".sticky").addClass("is-sticky");
+      } else {
+        $(".sticky").removeClass("is-sticky");
+      }
+    });
+  </script>
+
+</body>
+
+</html>

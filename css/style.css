@@ -30,7 +30,7 @@ a {
 }
 
 .btn-dark {
-  background-color: #3b4a69;
+  background-color: #88C03C;
   color: #fff !important;
   padding: 9px 20px !important;
   text-transform: uppercase;
@@ -91,7 +91,7 @@ a {
 
 .btn-dark:hover,
 .btn-white:hover {
-  background-color: #43cea2;
+  background-color: #3f3f3f;
   color: #fff !important;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -577,21 +577,11 @@ iframe {
 }
 
 .text-tran-box {
-  background: #43cea2;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #43cea2, #185a9d);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #43cea2, #185a9d);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
 }
 
 .text-tran-box-dark {
-  background: #24C6DC;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #24C6DC, #514A9D);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #24C6DC, #514A9D);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
 }
 
 .text-transparent {
@@ -1179,7 +1169,7 @@ textarea.form-control {
   width: 42px;
   line-height: 30px;
   color: #fff;
-  background: #43cea2;
+  background: #88C03C;
   text-align: center;
   border-radius: 50%;
   position: absolute;
